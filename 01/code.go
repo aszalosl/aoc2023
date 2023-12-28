@@ -8,7 +8,7 @@ import (
 )
 
 // first part of the problem
-func day01_part1(fileName string) {
+func part1(fileName string) {
 
 	f, err := os.Open(fileName)
 
@@ -85,7 +85,7 @@ func check01(str string, index int) int {
 }
 
 // second part of the problem
-func day01_part2(fileName string) {
+func part2(fileName string) {
 
 	f, err := os.Open(fileName)
 
@@ -136,4 +136,9 @@ func day01_part2(fileName string) {
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
 	}
+}
+func main() {
+	input := "input01.txt"
+	part1(input)
+	part2(input)
 }

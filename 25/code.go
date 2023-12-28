@@ -43,7 +43,7 @@ func move(g map[string]string, p map[string]float64, f string, l string) {
 }
 
 // https://adventofcode.com/2023/day/25
-func day25_part1(fileName string) {
+func part1(fileName string) {
 
 	f, err := os.Open(fileName)
 
@@ -106,4 +106,8 @@ func day25_part1(fileName string) {
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
 	}
+}
+func main() {
+	input := "input25.txt"
+	part1(input)
 }

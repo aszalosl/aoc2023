@@ -11,7 +11,7 @@ import (
 )
 
 // read the input of the problem into a string array, and use a one-char wide border
-func day03_read(fileName string) []string {
+func read(fileName string) []string {
 	f, err := os.Open(fileName)
 
 	if err != nil {
@@ -53,8 +53,8 @@ func surround(t []string, l int, s int, e int) bool {
 }
 
 // solve the first part
-func day03_part1(fileName string) {
-	table := day03_read(fileName)
+func part1(fileName string) {
+	table := read(fileName)
 	sum := 0
 	for lineNo := 1; lineNo < len(table)-1; lineNo++ {
 		line := table[lineNo]
@@ -172,8 +172,8 @@ func numbersAtStar(table []string, lineNo int, col int) int {
 		return 0
 	}
 }
-func day03_part2(fileName string) {
-	table := day03_read(fileName)
+func part2(fileName string) {
+	table := read(fileName)
 	sum := 0
 	for lineNo := 1; lineNo < len(table)-1; lineNo++ {
 		for i, ch := range table[lineNo] {
@@ -183,4 +183,9 @@ func day03_part2(fileName string) {
 		}
 	}
 	fmt.Println("Part 2: ", sum)
+}
+func main() {
+	input := "input03.txt"
+	part1(input)
+	part2(input)
 }
