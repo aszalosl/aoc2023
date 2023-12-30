@@ -83,7 +83,7 @@ func part2(fileName string) {
 		}
 		counter++
 	}
-	fmt.Println(multiplicity)
+
 	for _, value := range multiplicity {
 		sum += value
 	}
